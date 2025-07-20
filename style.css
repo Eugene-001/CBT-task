@@ -1,0 +1,83 @@
+body {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300 - 900;
+  font-style: normal;
+}
+
+.school-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 20px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.schoolname {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.intro {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #333;
+}
+
+.Student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Student-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Course-code-field,
+.Reg-No-field,
+.Full-Name-field,
+.Email-field,
+#Department {
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+#Department {
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.textarea {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 90%;
+}
