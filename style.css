@@ -81,3 +81,87 @@ fieldset {
   border: 1px solid #ddd;
   width: 90%;
 }
+/* ---------------------------------------------------- Added for the sake of mobile responsiveness */
+
+button[type="submit"] {
+  padding: 16px 32px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Full width on mobile */
+  margin-top: 24px;
+  /* transition: background-color 0.3s ease; Smooth hover effect */
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+.quiz-section {
+  padding: 20px;
+}
+
+fieldset div {
+  margin-bottom: 12px; /* Space between each form element */
+}
+
+legend {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .school-section {
+    padding: 20px 16px;
+    margin-bottom: 12px;
+  }
+
+  .schoolname {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  fieldset {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  legend {
+    font-size: 14px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .quiz-section {
+    padding: 16px;
+  }
+
+  button[type="submit"] {
+    padding: 18px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,336 @@
+/* ========================================
+   YOUR ORIGINAL CSS CODE (UNCHANGED)
+   DEFAULT WEB STYLES - APPLIES TO ALL DEVICES
+   ======================================== */
+
+body {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300 - 900;
+  font-style: normal;
+}
+
+.school-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 20px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.schoolname {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.intro {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #333;
+}
+
+.Student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Student-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Course-code-field,
+.Reg-No-field,
+.Full-Name-field,
+.Email-field,
+#Department {
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+#Department {
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.textarea {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 90%;
+}
+
+/* ========================================
+   RESPONSIVE ADDITIONS FOR WEB
+   THESE APPLY TO ALL DEVICES BY DEFAULT
+   ======================================== */
+
+/* 
+   CONTAINER WRAPPER - NEW ADDITION
+   This creates a max-width container to prevent content from stretching too wide on large screens
+   Centers the content and adds consistent horizontal padding
+*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 
+   IMPROVED INPUT AND FORM ELEMENTS - NEW ADDITION
+   Makes all form inputs full-width and properly sized
+   Box-sizing ensures padding doesn't break the layout
+*/
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+/* 
+   TEXTAREA IMPROVEMENTS - OVERRIDES YOUR ORIGINAL .textarea
+   Removes the fixed 90% width for better responsiveness
+   Adds minimum height and allows vertical resizing only
+*/
+.textarea {
+  width: 100%; /* Override your original 90% width */
+  min-height: 100px; /* Ensures textarea is tall enough */
+  resize: vertical; /* Users can only resize vertically, not horizontally */
+}
+
+/* 
+   QUIZ SECTION STYLING - NEW ADDITION
+   Adds consistent padding to the quiz area
+*/
+.quiz-section {
+  padding: 20px;
+}
+
+/* 
+   IMPROVED FIELDSET SPACING - NEW ADDITION
+   Better spacing between form elements within fieldsets
+*/
+fieldset div {
+  margin-bottom: 12px; /* Space between each form element */
+}
+
+fieldset div:last-child {
+  margin-bottom: 0; /* Remove margin from the last element */
+}
+
+/* 
+   LEGEND STYLING - NEW ADDITION
+   Makes fieldset legends more prominent and readable
+*/
+legend {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* 
+   SUBMIT BUTTON STYLING - NEW ADDITION
+   Your HTML doesn't have button styles, so this adds them
+*/
+button[type="submit"] {
+  padding: 16px 32px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Full width on mobile */
+  margin-top: 24px;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* 
+   RADIO BUTTON AND CHECKBOX IMPROVEMENTS - NEW ADDITION
+   Makes them larger and easier to tap on mobile devices
+*/
+input[type="radio"],
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* 
+   LABEL IMPROVEMENTS - ENHANCES YOUR ORIGINAL LABEL STYLES
+   Makes labels clickable and adds better spacing
+*/
+label {
+  cursor: pointer; /* Shows hand cursor when hovering */
+  display: block;
+  padding: 8px 0; /* More touch-friendly spacing */
+}
+
+/* 
+   ACCESSIBILITY FOCUS STATES - NEW ADDITION
+   Provides clear visual feedback when users tab through form elements
+*/
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #007bff; /* Blue outline */
+  outline-offset: 2px; /* Space between element and outline */
+}
+
+button:focus {
+  outline: 2px solid #fff; /* White outline for contrast */
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px #007bff; /* Blue glow effect */
+}
+
+/* ========================================
+   MOBILE RESPONSIVE BREAKPOINT ONLY
+   Applied when screen width is 768px or smaller
+   OVERRIDES THE DEFAULT WEB STYLES ABOVE
+   ======================================== */
+@media (max-width: 768px) {
+  
+  /* 
+     SCHOOL SECTION MOBILE ADJUSTMENTS
+     Reduces padding and margins for smaller screens
+  */
+  .school-section {
+    padding: 20px 16px; /* Less padding than default web (40px 20px) */
+    margin-bottom: 12px; /* Tighter margins than default web (16px) */
+  }
+  
+  /* 
+     SCHOOL NAME MOBILE STYLING
+     Larger font and centered for mobile prominence
+  */
+  .schoolname {
+    font-size: 18px; /* Slightly larger than default web (16px) */
+    text-align: center; /* Center on mobile (default web has no alignment) */
+  }
+  
+  /* 
+     INTRO TEXT MOBILE ADJUSTMENTS
+     Smaller font and centered for mobile readability
+  */
+  .intro {
+    font-size: 13px; /* Slightly smaller than default web (14px) */
+    text-align: center; /* Center on mobile (default web has no alignment) */
+  }
+  
+  /* 
+     FIELDSET MOBILE ADJUSTMENTS
+     Reduces padding and margins for better mobile spacing
+  */
+  fieldset {
+    padding: 12px; /* Less padding than default web (16px) */
+    margin-bottom: 16px; /* Tighter margins than default web (24px) */
+  }
+  
+  /* 
+     LEGEND MOBILE ADJUSTMENTS
+     Smaller font size for mobile screens
+  */
+  legend {
+    font-size: 14px; /* Smaller than default web (16px) */
+  }
+  
+  /* 
+     MOBILE INPUT FONT SIZE
+     16px prevents iOS from zooming in when user taps input fields
+     THIS IS CRITICAL FOR MOBILE USER EXPERIENCE
+  */
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* Critical for iOS - prevents automatic zoom */
+  }
+  
+  /* 
+     QUIZ SECTION MOBILE PADDING
+     Reduces padding for mobile screens
+  */
+  .quiz-section {
+    padding: 16px; /* Less than default web (20px) */
+  }
+  
+  /* 
+     SUBMIT BUTTON MOBILE ADJUSTMENTS
+     Larger button for easier mobile interaction
+  */
+  button[type="submit"] {
+    padding: 18px; /* More padding than default web (16px 32px) for easier tapping */
+    font-size: 18px; /* Larger text than default web (16px) for mobile */
+  }
+}
+
+/* ========================================
+   SUMMARY OF THIS SIMPLIFIED VERSION:
+   ======================================== 
+   
+   THIS FILE CONTAINS ONLY:
+   
+   1. DEFAULT WEB STYLES (Lines 1-220)
+      - Your original CSS code
+      - Enhanced responsive base styles
+      - Applies to ALL devices by default
+   
+   2. MOBILE OVERRIDES (Lines 222-290)
+      - Only applies to screens 768px and smaller
+      - Overrides the default web styles for mobile optimization
+      - Focuses on touch-friendly design and space efficiency
+   
+   KEY DIFFERENCES BETWEEN WEB AND MOBILE:
+   
+   WEB (Default):
+   - .school-section: 40px 20px padding
+   - .schoolname: 16px font, no alignment
+   - .intro: 14px font, no alignment  
+   - fieldset: 16px padding, 24px bottom margin
+   - legend: 16px font
+   - .quiz-section: 20px padding
+   - button: 16px 32px padding, 16px font
+   
+   MOBILE (768px and below):
+   - .school-section: 20px 16px padding (smaller)
+   - .schoolname: 18px font, centered (larger, centered)
+   - .intro: 13px font, centered (smaller, centered)
+   - fieldset: 12px padding, 16px bottom margin (smaller)
+   - legend: 14px font (smaller)
+   - .quiz-section: 16px padding (smaller)
+   - button: 18px padding, 18px font (larger for touch)
+   - ALL inputs: 16px font (prevents iOS zoom)
+   
+   ======================================== */

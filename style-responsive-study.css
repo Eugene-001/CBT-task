@@ -1,0 +1,398 @@
+/* ========================================
+   YOUR ORIGINAL CSS CODE (UNCHANGED)
+   ======================================== */
+
+body {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300 - 900;
+  font-style: normal;
+}
+
+.school-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 20px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.schoolname {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.intro {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #333;
+}
+
+.Student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Student-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.Course-code-field,
+.Reg-No-field,
+.Full-Name-field,
+.Email-field,
+#Department {
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+#Department {
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.textarea {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 90%;
+}
+
+/* ========================================
+   RESPONSIVE ADDITIONS START HERE
+   ======================================== */
+
+/* 
+   CONTAINER WRAPPER - NEW ADDITION
+   This creates a max-width container to prevent content from stretching too wide on large screens
+   Centers the content and adds consistent horizontal padding
+*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 
+   IMPROVED INPUT AND FORM ELEMENTS - NEW ADDITION
+   Makes all form inputs full-width and properly sized
+   Box-sizing ensures padding doesn't break the layout
+*/
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+/* 
+   TEXTAREA IMPROVEMENTS - OVERRIDES YOUR ORIGINAL .textarea
+   Removes the fixed 90% width for better responsiveness
+   Adds minimum height and allows vertical resizing only
+*/
+.textarea {
+  width: 100%; /* Override your original 90% width */
+  min-height: 100px; /* Ensures textarea is tall enough */
+  resize: vertical; /* Users can only resize vertically, not horizontally */
+}
+
+/* 
+   QUIZ SECTION STYLING - NEW ADDITION
+   Adds consistent padding to the quiz area
+*/
+.quiz-section {
+  padding: 20px;
+}
+
+/* 
+   IMPROVED FIELDSET SPACING - NEW ADDITION
+   Better spacing between form elements within fieldsets
+*/
+fieldset div {
+  margin-bottom: 12px; /* Space between each form element */
+}
+
+fieldset div:last-child {
+  margin-bottom: 0; /* Remove margin from the last element */
+}
+
+/* 
+   LEGEND STYLING - NEW ADDITION
+   Makes fieldset legends more prominent and readable
+*/
+legend {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* 
+   SUBMIT BUTTON STYLING - NEW ADDITION
+   Your HTML doesn't have button styles, so this adds them
+*/
+button[type="submit"] {
+  padding: 16px 32px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Full width on mobile */
+  margin-top: 24px;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* 
+   RADIO BUTTON AND CHECKBOX IMPROVEMENTS - NEW ADDITION
+   Makes them larger and easier to tap on mobile devices
+*/
+input[type="radio"],
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* 
+   LABEL IMPROVEMENTS - ENHANCES YOUR ORIGINAL LABEL STYLES
+   Makes labels clickable and adds better spacing
+*/
+label {
+  cursor: pointer; /* Shows hand cursor when hovering */
+  display: block;
+  padding: 8px 0; /* More touch-friendly spacing */
+}
+
+/* 
+   ACCESSIBILITY FOCUS STATES - NEW ADDITION
+   Provides clear visual feedback when users tab through form elements
+*/
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #007bff; /* Blue outline */
+  outline-offset: 2px; /* Space between element and outline */
+}
+
+button:focus {
+  outline: 2px solid #fff; /* White outline for contrast */
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px #007bff; /* Blue glow effect */
+}
+
+/* ========================================
+   MOBILE RESPONSIVE BREAKPOINT
+   Applied when screen width is 768px or smaller
+   ======================================== */
+@media (max-width: 768px) {
+  
+  /* 
+     SCHOOL SECTION MOBILE ADJUSTMENTS
+     Reduces padding and margins for smaller screens
+  */
+  .school-section {
+    padding: 20px 16px; /* Less padding than desktop */
+    margin-bottom: 12px; /* Tighter margins */
+  }
+  
+  /* 
+     SCHOOL NAME MOBILE STYLING
+     Larger font and centered for mobile prominence
+  */
+  .schoolname {
+    font-size: 18px; /* Slightly larger than your original 16px */
+    text-align: center; /* Center on mobile */
+  }
+  
+  /* 
+     INTRO TEXT MOBILE ADJUSTMENTS
+     Smaller font and centered for mobile readability
+  */
+  .intro {
+    font-size: 13px; /* Slightly smaller than your original 14px */
+    text-align: center; /* Center on mobile */
+  }
+  
+  /* 
+     FIELDSET MOBILE ADJUSTMENTS
+     Reduces padding and margins for better mobile spacing
+  */
+  fieldset {
+    padding: 12px; /* Less padding than your original 16px */
+    margin-bottom: 16px; /* Tighter margins than your original 24px */
+  }
+  
+  /* 
+     LEGEND MOBILE ADJUSTMENTS
+     Smaller font size for mobile screens
+  */
+  legend {
+    font-size: 14px; /* Smaller than desktop 16px */
+  }
+  
+  /* 
+     MOBILE INPUT FONT SIZE
+     16px prevents iOS from zooming in when user taps input fields
+  */
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* Critical for iOS - prevents zoom */
+  }
+  
+  /* 
+     QUIZ SECTION MOBILE PADDING
+     Reduces padding for mobile screens
+  */
+  .quiz-section {
+    padding: 16px; /* Less than desktop 20px */
+  }
+  
+  /* 
+     SUBMIT BUTTON MOBILE ADJUSTMENTS
+     Larger button for easier mobile interaction
+  */
+  button[type="submit"] {
+    padding: 18px; /* More padding for easier tapping */
+    font-size: 18px; /* Larger text for mobile */
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE BREAKPOINT
+   Applied when screen width is between 769px and 1024px
+   ======================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  /* 
+     SCHOOL SECTION TABLET ADJUSTMENTS
+     Medium padding for tablet screens
+  */
+  .school-section {
+    padding: 30px; /* Between mobile and desktop values */
+  }
+  
+  /* 
+     CONTAINER TABLET ADJUSTMENTS
+     More padding on tablets for better use of space
+  */
+  .container {
+    padding: 0 40px; /* More padding than mobile */
+  }
+  
+  /* 
+     FIELDSET TABLET ADJUSTMENTS
+     Medium padding for tablet screens
+  */
+  fieldset {
+    padding: 20px; /* Between mobile and desktop values */
+  }
+  
+  /* 
+     SUBMIT BUTTON TABLET ADJUSTMENTS
+     Auto-width centered button instead of full-width
+  */
+  button[type="submit"] {
+    width: auto; /* Not full width like mobile */
+    min-width: 200px; /* Minimum button width */
+    margin: 24px auto 0; /* Center the button */
+    display: block; /* Required for margin auto centering */
+  }
+}
+
+/* ========================================
+   DESKTOP RESPONSIVE BREAKPOINT
+   Applied when screen width is 1025px or larger
+   ======================================== */
+@media (min-width: 1025px) {
+  
+  /* 
+     SCHOOL SECTION DESKTOP ADJUSTMENTS
+     Full padding for desktop screens (keeps your original values)
+  */
+  .school-section {
+    padding: 40px; /* Your original value */
+  }
+  
+  /* 
+     SUBMIT BUTTON DESKTOP ADJUSTMENTS
+     Larger centered button for desktop
+  */
+  button[type="submit"] {
+    width: auto; /* Not full width */
+    min-width: 250px; /* Larger minimum than tablet */
+    margin: 32px auto 0; /* More top margin and centered */
+    display: block; /* Required for margin auto centering */
+  }
+  
+  /* 
+     FIELDSET DESKTOP LAYOUT
+     Constrains width and centers fieldsets for better desktop readability
+  */
+  fieldset {
+    max-width: 800px; /* Prevents fieldsets from being too wide */
+    margin-left: auto; /* Centers the fieldset */
+    margin-right: auto; /* Centers the fieldset */
+    margin-bottom: 32px; /* More space between fieldsets */
+  }
+}
+
+/* ========================================
+   SUMMARY OF CHANGES MADE:
+   ======================================== 
+   
+   1. Added container wrapper for better content management
+   2. Made all form inputs responsive with box-sizing
+   3. Fixed textarea width from 90% to 100%
+   4. Added proper button styling (your original had none)
+   5. Improved spacing throughout with better margins/padding
+   6. Added mobile-first responsive breakpoints:
+      - Mobile: 768px and below
+      - Tablet: 769px to 1024px  
+      - Desktop: 1025px and above
+   7. Added accessibility improvements with focus states
+   8. Made touch targets larger for mobile usability
+   9. Added iOS-specific font-size to prevent zoom
+   10. Centered content appropriately for different screen sizes
+   
+   NEXT STEPS FOR YOU:
+   1. Test this CSS with your HTML
+   2. Replace your original style.css with this version
+   3. Consider changing the HTML textarea inputs as mentioned earlier
+   4. Add the container div wrapper to your HTML if desired
+   
+   ======================================== */
