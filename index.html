@@ -238,7 +238,7 @@
               <input
                 type="textarea"
                 id="answer-a"
-                name="Question-1"
+                name="Question-5"
                 placeholder="In your own words, explain why it's important to have an emergency fund."
                 class="textarea"
               />
@@ -378,5 +378,95 @@
         </form>
       </div>
     </div>
+    <!-- 
+    THIS IS WHERE THE JAVASCRIPT CODES STARTS FROM. -->
+
+    <script>
+      const answerKey = {
+        "Question-1": "B",
+        "Question-2": "C",
+        "Question-3": ["A", "B", "D"],
+        "Question-4": ["B", "D"],
+        "Question-6": "C",
+        "Question-7": ["A", "B", "D"],
+      };
+
+      document
+        .querySelector(".quiz-section form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const userAnswers = extractAnswers(formData);
+          const grade = CalculateGrade(userAnswers);
+
+          // Come back to this then work on the modal afterwards.
+          alert(
+            "Your Score: " +
+              grade.score +
+              "/" +
+              grade.total +
+              " (" +
+              grade.percentage +
+              "%)"
+          );
+        });
+
+      function arraysEqual(arr1, arr2) {
+        return (
+          arr1.length === arr2.length &&
+          arr1.every((val, index) => val === arr2[index])
+        );
+      }
+
+      function extractAnswers(formData) {
+        const answers = {};
+        for (let [name, value] of formData.entries()) {
+          if (name.startsWith("Question-")) {
+            if (!answers[name]) {
+              answers[name] = [];
+            }
+            answers[name].push(value);
+          }
+        }
+        return answers;
+      }
+
+      function CalculateGrade(userAnswers) {
+        let totalQuestions = Object.keys(answerKey).length;
+        let correctAnswers = 0;
+        let questionResults = {};
+
+        for (let questionName in answerKey) {
+          const correctAnswer = answerKey[questionName];
+          const userAnswer = userAnswers[questionName] || [];
+
+          let isCorrect = false;
+
+          if (Array.isArray(correctAnswer)) {
+            isCorrect = arraysEqual(userAnswer.sort(), correctAnswer.sort());
+          } else {
+            isCorrect = userAnswer.includes(correctAnswer);
+          }
+
+          if (isCorrect) {
+            correctAnswers++;
+          }
+
+          questionResults[questionName] = {
+            correct: isCorrect,
+            userAnswer: userAnswer,
+            correctAnswer: correctAnswer,
+          };
+        }
+
+        return {
+          score: correctAnswers,
+          total: totalQuestions,
+          percentage: Math.round((correctAnswers / totalQuestions) * 100),
+          results: questionResults,
+        };
+      }
+    </script>
   </body>
 </html>

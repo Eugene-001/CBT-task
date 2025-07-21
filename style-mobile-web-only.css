@@ -222,7 +222,6 @@ button:focus {
    OVERRIDES THE DEFAULT WEB STYLES ABOVE
    ======================================== */
 @media (max-width: 768px) {
-  
   /* 
      SCHOOL SECTION MOBILE ADJUSTMENTS
      Reduces padding and margins for smaller screens
@@ -231,7 +230,7 @@ button:focus {
     padding: 20px 16px; /* Less padding than default web (40px 20px) */
     margin-bottom: 12px; /* Tighter margins than default web (16px) */
   }
-  
+
   /* 
      SCHOOL NAME MOBILE STYLING
      Larger font and centered for mobile prominence
@@ -240,7 +239,7 @@ button:focus {
     font-size: 18px; /* Slightly larger than default web (16px) */
     text-align: center; /* Center on mobile (default web has no alignment) */
   }
-  
+
   /* 
      INTRO TEXT MOBILE ADJUSTMENTS
      Smaller font and centered for mobile readability
@@ -249,7 +248,7 @@ button:focus {
     font-size: 13px; /* Slightly smaller than default web (14px) */
     text-align: center; /* Center on mobile (default web has no alignment) */
   }
-  
+
   /* 
      FIELDSET MOBILE ADJUSTMENTS
      Reduces padding and margins for better mobile spacing
@@ -258,7 +257,7 @@ button:focus {
     padding: 12px; /* Less padding than default web (16px) */
     margin-bottom: 16px; /* Tighter margins than default web (24px) */
   }
-  
+
   /* 
      LEGEND MOBILE ADJUSTMENTS
      Smaller font size for mobile screens
@@ -266,7 +265,7 @@ button:focus {
   legend {
     font-size: 14px; /* Smaller than default web (16px) */
   }
-  
+
   /* 
      MOBILE INPUT FONT SIZE
      16px prevents iOS from zooming in when user taps input fields
@@ -277,7 +276,7 @@ button:focus {
   textarea {
     font-size: 16px; /* Critical for iOS - prevents automatic zoom */
   }
-  
+
   /* 
      QUIZ SECTION MOBILE PADDING
      Reduces padding for mobile screens
@@ -285,7 +284,7 @@ button:focus {
   .quiz-section {
     padding: 16px; /* Less than default web (20px) */
   }
-  
+
   /* 
      SUBMIT BUTTON MOBILE ADJUSTMENTS
      Larger button for easier mobile interaction

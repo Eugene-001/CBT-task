@@ -219,7 +219,6 @@ button:focus {
    Applied when screen width is 768px or smaller
    ======================================== */
 @media (max-width: 768px) {
-  
   /* 
      SCHOOL SECTION MOBILE ADJUSTMENTS
      Reduces padding and margins for smaller screens
@@ -228,7 +227,7 @@ button:focus {
     padding: 20px 16px; /* Less padding than desktop */
     margin-bottom: 12px; /* Tighter margins */
   }
-  
+
   /* 
      SCHOOL NAME MOBILE STYLING
      Larger font and centered for mobile prominence
@@ -237,7 +236,7 @@ button:focus {
     font-size: 18px; /* Slightly larger than your original 16px */
     text-align: center; /* Center on mobile */
   }
-  
+
   /* 
      INTRO TEXT MOBILE ADJUSTMENTS
      Smaller font and centered for mobile readability
@@ -246,7 +245,7 @@ button:focus {
     font-size: 13px; /* Slightly smaller than your original 14px */
     text-align: center; /* Center on mobile */
   }
-  
+
   /* 
      FIELDSET MOBILE ADJUSTMENTS
      Reduces padding and margins for better mobile spacing
@@ -255,7 +254,7 @@ button:focus {
     padding: 12px; /* Less padding than your original 16px */
     margin-bottom: 16px; /* Tighter margins than your original 24px */
   }
-  
+
   /* 
      LEGEND MOBILE ADJUSTMENTS
      Smaller font size for mobile screens
@@ -263,7 +262,7 @@ button:focus {
   legend {
     font-size: 14px; /* Smaller than desktop 16px */
   }
-  
+
   /* 
      MOBILE INPUT FONT SIZE
      16px prevents iOS from zooming in when user taps input fields
@@ -273,7 +272,7 @@ button:focus {
   textarea {
     font-size: 16px; /* Critical for iOS - prevents zoom */
   }
-  
+
   /* 
      QUIZ SECTION MOBILE PADDING
      Reduces padding for mobile screens
@@ -281,7 +280,7 @@ button:focus {
   .quiz-section {
     padding: 16px; /* Less than desktop 20px */
   }
-  
+
   /* 
      SUBMIT BUTTON MOBILE ADJUSTMENTS
      Larger button for easier mobile interaction
@@ -297,7 +296,6 @@ button:focus {
    Applied when screen width is between 769px and 1024px
    ======================================== */
 @media (min-width: 769px) and (max-width: 1024px) {
-  
   /* 
      SCHOOL SECTION TABLET ADJUSTMENTS
      Medium padding for tablet screens
@@ -305,7 +303,7 @@ button:focus {
   .school-section {
     padding: 30px; /* Between mobile and desktop values */
   }
-  
+
   /* 
      CONTAINER TABLET ADJUSTMENTS
      More padding on tablets for better use of space
@@ -313,7 +311,7 @@ button:focus {
   .container {
     padding: 0 40px; /* More padding than mobile */
   }
-  
+
   /* 
      FIELDSET TABLET ADJUSTMENTS
      Medium padding for tablet screens
@@ -321,7 +319,7 @@ button:focus {
   fieldset {
     padding: 20px; /* Between mobile and desktop values */
   }
-  
+
   /* 
      SUBMIT BUTTON TABLET ADJUSTMENTS
      Auto-width centered button instead of full-width
@@ -339,7 +337,6 @@ button:focus {
    Applied when screen width is 1025px or larger
    ======================================== */
 @media (min-width: 1025px) {
-  
   /* 
      SCHOOL SECTION DESKTOP ADJUSTMENTS
      Full padding for desktop screens (keeps your original values)
@@ -347,7 +344,7 @@ button:focus {
   .school-section {
     padding: 40px; /* Your original value */
   }
-  
+
   /* 
      SUBMIT BUTTON DESKTOP ADJUSTMENTS
      Larger centered button for desktop
@@ -358,7 +355,7 @@ button:focus {
     margin: 32px auto 0; /* More top margin and centered */
     display: block; /* Required for margin auto centering */
   }
-  
+
   /* 
      FIELDSET DESKTOP LAYOUT
      Constrains width and centers fieldsets for better desktop readability
